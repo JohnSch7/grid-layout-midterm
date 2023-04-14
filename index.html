@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Grid - line-based placement starting point</title>
+    <style>
+        body {
+            background-color: #1F2833;
+            width: 90vw;
+            height: 90vh;
+            max-width: 900px;
+            margin: 2em auto;
+            font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            height: 10vh;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "none footer";
+        }
+
+        header,
+
+        aside {
+            border-right: 5px solid #45A29E;
+        }
+
+        header {
+            padding: 10px;
+            background-color: aliceblue;
+            grid-column: 1 / 3;
+            grid-row: 1;
+            grid-area: header;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: x-large;
+        }
+
+        article {
+            padding: 10px;
+            background-color: aliceblue;
+            grid-column: 2;
+            grid-row: 2;
+            grid-area: content;
+        }
+
+        aside {
+            padding: 10px;
+            background-color: aliceblue;
+            grid-column: 1;
+            grid-row: 2;
+            grid-area: sidebar;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: aliceblue;
+            grid-column: 1;
+            grid-row: 1;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="Back to Top">The Blender Foundation</div>
+        </header>
+
+        <aside>
+            <h2>Nav Menu</h2>
+            <p>
+            <ul class="myUL">
+
+                <li><a href="#Organization"> Organization </a></li>
+
+                <br>
+
+                <li><a href="#Goals"> Goals </a></li>
+
+                <br>
+
+                <li><a href="#Part of the Industry"> Part of the Industry </a></li>
+
+                <br>
+
+                <li><a href="#Created with Blender"> Created with Blender</a></li>
+
+                <br>
+
+                <li><a href="#My Blender Journey"> My Blender Journey</a></li>
+
+            </ul>
+            </p>
+        </aside>
+
+        <article>
+
+            <h1 id="Organization">Organization</h1>
+
+            <p>
+                The <a href="https://www.blender.org/about/foundation/" target="new">
+                    Blender Foundation</a>
+
+                (2002) is an independent public benefit organization with the purpose to provide a
+                complete, free and open source 3D creation pipeline, managed by public projects on <a
+                    href="https://www.blender.org" target="new">blender.org</a>.
+
+                <br> <br>
+
+                Its spin-off corporation Blender Institute (2007) hosts the foundation’s offices and currently employs
+                24
+                people who work on the Blender software and creative projects to validate and stress Blender in
+                production
+                environments.
+
+                <br> <br>
+
+                The Foundation’s income is via donations and the <a href="https://fund.blender.org/"
+                    target="new">Development Fund</a>.
+
+                The Institute revenues come from <a href="https://studio.blender.org/welcome/" target="new">Blender
+                    Cloud</a>,
+
+                the <a href="https://store.blender.org/" target="new">Blender Store</a>
+
+                and sponsoring. This enables <a href="https://en.wikipedia.org/wiki/Ton_Roosendaal" target="new">Ton
+                    Roosendaal</a>
+
+                and a small staff to work full-time on Blender, organize activities for SIGGRAPH or the <a
+                    href="https://conference.blender.org/2022/" target="new">Blender Conference</a>,
+
+                support development, documentation and training projects, maintain and host <a
+                    href="https://www.blender.org" target="new">blender.org</a> services, and pay
+                for bookkeeping and administration expenses.
+
+                <br> <br>
+
+                Blender remains a true community effort. Work on Blender itself, new projects or roadmaps are all
+                managed
+                via open channels on <a href="https://www.blender.org" target="new">blender.org</a>.
+
+                <a href="https://www.blender.org/get-involved/" target="new">You can learn
+                    more about them and get involved</a>.
+            </p>
+
+            <h1 id="Goals">Goals</h1>
+
+            <p>
+                Blender Foundation facilitates a public project on <a href="https://www.blender.org"
+                    target="new">blender.org</a> with the mission to get the world’s best 3D
+                CG technology in the hands of artists as free/open source software.
+
+                <br> <br>
+
+                Our vision is that everyone should be free to create 3D CG content, with free technical and creative
+                production means and free access to markets.
+
+                <br> <br>
+
+                The Foundation’s goals are:
+
+            <ul class="myUL">
+
+                <li>Manage the facilities on blender.org for users and developers who want to contribute to Blender.
+                </li>
+
+                <li>Maintain and improve the current Blender product via a public accessible source code system under
+                    the
+                    GNU
+                    General Public License.</li>
+
+                <li>Establish funding or revenue mechanisms that serve the foundation’s goals and cover the foundation’s
+                    expenses.</li>
+
+                <li>Provide individual artists and small teams with a complete, free and open source 3D creation
+                    pipeline.
+                </li>
+
+            </ul>
+            </p>
+
+            <h1 id="Part of the Industry">Part of the Industry</h1>
+
+            <p>
+                Blender Foundation is a recognized partner for many big corporations in the technical/creative industry.
+                This is not only via the membership of the <a href="https://fund.blender.org/" target="new">Development
+                    Fund</a>, but especially as official members of:
+
+            <ul class="myUL">
+
+                <li>The <a href="https://www.khronos.org/members/list#associateMember" target="new">Khronos Group</a>.
+                    Associate Member. Furthering open standards.</li>
+
+                <li>The <a href="https://openinventionnetwork.com/" target="new">Open Invention Network</a>.
+                    Non-aggression
+                    alliance for patents.</li>
+
+                <li>The <a href="https://www.linuxfoundation.org/" target="new">Linux Foundation</a>. Supporting open
+                    source
+                    ecosystems.</li>
+
+                <li>The <a href="https://www.aswf.io/" target="new">Academy Software Foundation</a>. Open source for the
+                    creative industry.</li>
+
+                <li><a href="https://www.asifa-hollywood.org/" target="new">ASIFA Hollywood</a>. The international
+                    animated
+                    film society – best known from the Annie Awards.</li>
+
+            </ul>
+
+            </p>
+
+            <h1 id="Created with Blender">Created with Blender</h1>
+
+            <p>
+                The <a href="https://www.youtube.com/@BlenderStudio" target="new">Blender Studio YouTube channel</a>
+                posts
+                animated shorts, behind the scenes videos, workflow overviews, etc.
+
+                <br> <br>
+
+                In their animated shorts, everything from the modeling, sculpting, rigging, animating, texturing,
+                compositing
+                and rendering is done within Blender.
+
+                <br> <br>
+
+                Check out the <a href="https://www.youtube.com/playlist?list=PLav47HAVZMjnTFVZL-aImCQIC0uLZtNCz"
+                    target="new">Blender Open Movies YouTube playlist</a>.
+
+            </p>
+
+            <p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UXqq0ZvbOnk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_cMxraX_5RE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+            </p>
+
+            <p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WhWc3b3KhnY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mN0zPOpADL4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+            </p>
+
+            <h1 id="My Blender Journey">My Blender Journey</h1>
+
+            <p>
+                I started my Blender journey in 2020.
+
+                <br> <br>
+
+                Here's a list of resources I would recommend to beginners:
+
+            <ul class="myUL">
+
+                <li><a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD"
+                        target="new">Blender
+                        Beginner Donut Tutorial</a> playlist by Blender Guru.</li>
+
+                <li><a href="https://www.youtube.com/playlist?list=PL4Dq5VyfewIxxjzS34k2NES_PuDUIjRcY" target="new">
+                        Lazy
+                        Tutorials</a> playlist by Ian Hubert.</li>
+
+                <li><a href="https://www.youtube.com/@TheDucky3D/videos" target="new">Ducky 3D</a> YouTube channel.</li>
+
+                <li><a href="https://www.artstation.com/?sort_by=trending" target="new"> ArtStation</a> for inspiration.
+                </li>
+
+                <li><a href="https://sketchfab.com/" target="new"> Sketchfab</a> for 3D assets.</li>
+
+                <li><a href="https://www.mixamo.com/#/" target="new"> Mixamo</a> for free characters and animations.
+                </li>
+
+                <li><a href="https://blendermarket.com/" target="new"> Blender Marketplace</a> to buy assets and support
+                    community creators.</li>
+
+            </ul>
+
+            </p>
+
+            <p>
+
+                Below are some projects I've created with Blender.
+
+                <br> <br>
+
+                <em>Click image for fullscreen</em>
+
+                <br> <br>
+
+                <a href="images/Red Canoe AE.png" target="new">
+                    <img src="images/Red Canoe AE thumbnail.jpg" title="Red canoe floating in water">
+                </a>
+
+                <a href="images/Static Life AE.png" target="new">
+                    <img src="images/Static Life AE thumbnail.jpg" title="Mirror reflection of scarecrow">
+                </a>
+
+
+
+
+
+                <a href="images/Hallway Search AE.png" target="new">
+                    <img src="images/Hallway Search AE thumbnail.jpg" title="Soldier in hallway">
+                </a>
+
+                <a href="images/King Arena AE.png" target="new">
+                    <img src="images/King Arena AE thumbnail.jpg" title="Soldiers engaged in combat">
+                </a>
+
+
+
+            </p>
+
+            <p>
+
+                Check out my <a href="https://www.artstation.com/johnschroedervfx" target="new"> ArtStation</a> for more
+                work.
+
+                <br><br>
+
+                <a href="#Back to Top">Back to Top</a>
+
+                <br><br>
+
+                <em><a href="index-alt.html">alternate page layout</a></em>
+
+            </p>
+
+        </article>
+
+        <footer>Contact me: <a href="mailto: johnschroederfilm@gmail.com">Send Email</a></footer>
+    </div>
+</body>
+
+</html>
